@@ -1,0 +1,142 @@
+{% extends "base.html" %}
+
+{% block name_content %}
+    <span><h1>Welcome!</h1></span>
+    <br>
+    <h1>My name is <span class="no-drop">Ethan Mathieu.</span></h1>
+    <br>
+    <h1>I like to build things.</h1>
+
+{% endblock %}
+
+{% block about_me %}
+    <div class="center" style="text-align: center; line-height: 200%; width: 100%;" >
+        <p style="font-size: 16">
+            Hello! My name is Ethan Mathieu and I’m a sophomore at Yale studying Computer Science. <br>
+            Thank you for taking the time to visit my website and learn a little bit more about me. 
+        </p>
+        <br />
+        <p>
+            <span class="clear"><mark>I like to build things.</mark></span> 
+            <br/>
+            
+            CS has always been a passion of mine. Some of my fondest childhood memories are of programming lego robots and making games on Scratch.
+            Tinkering around was just <em>fun</em>. <br>
+            As I grew older, though, I realized that I had the most fun when the task wasn’t solely dominated by the technical, but also the creative and abstract. <span class='clear'><mark>I’m drawn to CS because it’s more of an art form than anything.</mark></span> It’s a blank slate—a canvas for me to impart my own ideas on, except this canvas actually has <em>function</em>.  There’s always something more to learn, but you are <span class='clear'><mark>rewarded</mark></span>with the experience from your past triumphs. And, uniquely, you can easily bring your friends along for the ride and <span class="clear"><mark>make something cool and useful</mark></span> <em>together</em>. <br> These reasons are, ultimately, why I love developing.
+        </p>
+        <br />
+        <p>
+            <span class="clear"><mark>Currently, I am working as an Undergraduate Research Assistant for the Efficient Computing Lab @ Yale and as a General Developer for the Yale Computer Society.</mark></span> However, these aren't my only CS endeavors, as I am constantly working on my own side projects. The ones that I thought were the coolest are under the project tab. 
+            <br>
+            Also, please do not hesistate to reach out to me using the Contact form if you have any questions about me or my work!
+        </p>
+
+    </div>
+
+{% endblock %}
+
+{% block Resume %}
+<div class="resume reveal">
+    <h1>Experience</h1>
+    <ul  style="border: 1px solid black"></ul>
+    <h3><strong> Efficient Computing Lab (ECL) @ Yale</strong></h3>							  
+    <h4>Undergraduate Research Assistant</h4>
+    <h5><em> Jun. 2022 – Present</em></h5>      
+    <p>    Work under Professor Lin Zhong to design applications on top of the experimental Theseus Operating System (OS) to test the efficiency of the OS’ 10 GbE ixgbe Network Driver.</p>                                                                                     
+    <p> 	Help redesign the driver in accordance to obtained results.</p> 
+    <p> 	Attend weekly lab meetings where lab members and guest speakers discuss their research. </p>
+    <p> 	Invited to attend USENIX 2022 through awarded grant from the conference. </p>
+    <ul  style="border: 1px solid black"></ul>
+    <h3><strong>Yale Computer Society (y/cs)</strong></h3>							  
+    <h4> General Developer </h4>
+    <h5><em> Oct. 2022 –  Present</em></h5>      
+    <p> 	Work as part of a development team creating a web application using ReactJS designed to help Yale students find study groups. </p>
+    <ul  style="border: 1px solid black"></ul>
+    <h3><strong>Code Haven</strong></h3>							  
+    <h4>         Mentor    </h4>
+    <h5><em> Oct. 2022 –  Dec. 2022 </em></h5>      
+    <p> 	Mentored a cohort of 4 New Haven middle schoolers on the basic principles of CS using Scratch. </p>
+    <ul  style="border: 1px solid black"></ul>
+    <h3> <strong> Integrated Refugee and Immigrant Services (IRIS)</strong></h3>							  
+    <h4>        Intern    </h4>
+    <h5><em> Jun. 2021 – Aug. 2021</em></h5>      
+    <p>  Collected data to create an interactive map of New Haven highlighting key locations for recent U.S. immigrants  </p>
+    <p> 	Scripted, recorded, and edited a video explaining how to use the map I designed for future employees.</p>
+    <ul  style="border: 1px solid black"></ul>
+    <h3><strong>Yale Admissions Office</strong></h3>							  
+    <h4>Summer Tour Guide</h4>
+    <h5><em> Jun. 2021 – Aug. 2021</em></h5>      
+    <p>  Give weekly tours to prospective students and their families.</p>
+    <ul  style="border: 1px solid black"></ul>
+    <h4 style="margin-bottom: 15px;"><b>Relevant Skills: </b>Python, HTML5/CSS3, Rust, JavaScript, ReactJS, Flask, C, English (native speaker)</h4>
+    <ul  style="border: 1px solid black"></ul>
+    <h4><b>Relevant Courswork: </b>Intro to CS, Data Structures and Programming Techniques, Mathematical Tools for CS, System Programming and Computer Organization (Fall 2022), Algorithms (Spring 2022)</h4>
+
+
+</div>
+
+{% endblock %}
+
+{% block project1 %}
+<div class='p-card reveal'>
+        <img src="/static/images/forwarder.png" alt="project-image">    
+        <div class="card-content">
+        <br>
+        <h4><b>Research Applications</b></h2>
+        <h5><em>Summer 2022 - Present</em></h5>
+        <div class="skill-rack">
+            <div class='skill'>
+                <p style="background-color: rgb(203,96,21)">Rust</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: rgb(87, 87, 87)">Computer Networking</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: rgb(87, 87, 87)">Research</p>
+            </div>
+        </div>
+        <p>
+            I designed a packet forwardering application to test the throughput of a 10 GbE ixgbe driver. I help to iterate on
+            the driver's design to hopefully acheive a line rate of network throughput. 
+        </p>
+    </div>
+
+</div>
+{% endblock %}
+
+{% block project2 %}
+<div class='p-card reveal'>
+        <img src="/static/images/portfolio.png" alt="project-image">    
+        <div class="card-content">
+        <br>
+        <h4><b>Personal Portfoilo</b></h2>
+        <h5><em>July 2022</em></h5>
+        <div class="skill-rack">
+            <div class='skill'>
+                <p style="background-color: red">HTML5</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: blue">CSS3</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: green">Python</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: rgba(206, 198, 34, 0.953)">Flask</p>
+            </div>
+            <div class='skill'>
+                <p style="background-color: rgb(87, 87, 87)">Web Development</p>
+            </div>
+        </div>
+        <p>
+            What you currently are seeing, my personal portfolio! I designed this as a landing page for anyone
+            interested in learning more about me or seeing the side projects I'm making. 
+        </p>
+    </div>
+
+</div>
+{% endblock %}
+
+
+
+

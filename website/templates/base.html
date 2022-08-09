@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <script src='/static/scripts.js'></script>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+            crossorigin="anonymous"
+        />
+        <link 
+            rel="stylesheet" 
+            href="{{ url_for('static', filename='css/main.css') }}"
+        />
+
+        <title>
+            {% block title %}Ethan Mathieu - Yale{% endblock%}
+        </title>
+
+
+
+    </head>
+
+    
+    <body style="background-color:#192a5b; font-family: Verdana; text-shadow: 2px 2px black; color: white;">
+        <div class="nav">
+            <nav class="navbar fixed-top navbar-expand-lg text-center" >
+            <button 
+                class="navbar-toggler" 
+                type="button" 
+                data-toggle="collaspe" 
+                data-target="#navbar"
+                style="box-shadow: 5px 10px #888888;"          
+            >
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                <div class="collaspe navbar-collaspe" id="navbar">
+                    <div class="navbar-nav ml-auto text-center ">
+                        <a class="nav-item nav-link" id="link" href="#home">Home</a>
+                        <a class="nav-item nav-link" id="link" href="#about_me">About</a>
+                        <a class="nav-item nav-link" id="link" href="#resume">Resume</a>
+                        <a class="nav-item nav-link" id="link" href="#projects">Projects</a>
+                        <a class="nav-item nav-link" id="link" href="#form">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        <section id="home">
+            <div class="t-parent" id="home">
+                <br>
+                <br>
+                <br>
+                <div 
+                    class="name" 
+                    style="
+                        color: white; 
+                        text-align: left; 
+                        margin: 40px; 
+                        margin-bottom: 0px; 
+                        font-weight: bold
+                    "
+                >
+                    {%block name_content %}
+                    {% endblock %}
+                </div>
+
+                <div class="meet-element">
+                    <button id="meet" type="button" class="btn btn-dark" onClick="location.href='#about_me'">Meet Me</button>
+                </div>
+    
+                <div class="center-obj">
+                    <p>Scroll</p>
+                    <br>
+                    <div class="down-arrow"></div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="about_me">
+            <a id="about_me">
+            <br>
+            <br>
+            <div class="t-parent reveal" id="about"> 
+                <div class="about reveal">
+                    {% block about_me %}
+                    {% endblock %}
+                </div>
+            </div>
+        </section>
+        <br>
+        <br>
+        <section id="the_resume">
+            <a id="resume"></a>
+    
+            <div class="item reveal">
+                {% block Resume %}
+                {% endblock %}
+            </div>
+        </section>
+    
+        <section id="the_projects">
+            <a id="projects"></a>
+                <div class="proj-header reveal">
+                    <h1 style="text-align: center; font-size: 100px; margin: 30px;">Projects</h1>
+                    <br>
+                    <br>
+                    <div class="p-rack">
+                        
+                        <div class="proj">
+                            {% block project1 %}
+                            {% endblock %}
+                        </div>
+
+                        <div class="proj">
+                            {% block project2 %}
+                            {% endblock %}
+                        </div>
+
+
+                        <div class="proj">
+                            {% block project3 %}
+                            {% endblock %}
+                        </div>
+                        
+
+                    </div>
+                </div>
+            </div>  
+        </section>
+
+        <section id="form">
+            <a id="form" style="padding: 50px"></a>
+            <div class="item reveal">
+                <form method="GET" enctype=”multipart/form-data” action="mailto:ethan.mathieu@yale.edu">
+                    <h3 align="center"><strong>Message Me</strong> </h3>           
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input
+                            type="subject"
+                            class="form-control"
+                            id="subject"
+                            name="subject"
+                            placeholder="Subject"
+                        />
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <input
+                            type="message"
+                            class="form-control"
+                            id="message"
+                            name="body"
+                            placeholder="Enter your messasge and I will get back to you!"
+                        />
+                    </div>
+                    <br/>  
+                    <button type="submit" class="btn btn-dark">Send</button>
+                </form>
+            </div>
+        </section>
+
+        <br>
+
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+        ></script>
+       <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"
+        ></script>
+       <script
+        src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"
+        ></script>
+
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css">
+
+        <footer class="bg-dark text-center text-white reveal">
+            <div class="container p-4 pb-0">
+            <div class="mb-4">
+                <a class="btn btn-outline-light btn-floating m-1" href="https://www.linkedin.com/in/ethan-mathieu" role="button"
+                ><i class="fab fa-linkedin-in"></i
+                ></a>
+                <a class="btn btn-outline-light btn-floating m-1" href="https://github.com/emath12" role="button"
+                ><i class="fab fa-github"></i
+                ></a>
+            </div>
+            </div>
+            <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+                <h3><b>Ethan Mathieu</b></h3>
+                <p>Undergraduate Research Assistant</p>
+                <p>Yale University</p>
+            </div>
+        </footer>
+        <span class="kaity!"></span>
+    </body>
+</html>

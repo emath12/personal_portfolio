@@ -1,0 +1,275 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.body {
+    color: white;
+    text-align: center;
+    margin: 0;
+
+}
+
+footer {
+    position: absolute;
+    text-shadow: 0px 0px black;
+    width: 100%;
+}
+
+.navbar a {
+    color: white;
+}
+
+.nav {
+    background-color: #192a5b;
+    text-align: right;
+}
+
+nav {
+    background-color: #192a5b; 
+    text-shadow: 2px 2px black; 
+    color: white;
+    text-align: right
+
+}
+
+#link:hover {
+    font-weight: 550;
+}
+
+.container {
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    width: 100%;   
+    height: 100%;
+    color: white;
+} 
+
+.meet {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 50%
+    
+}
+
+.t-parent {
+    height: 100vh;
+    
+}
+
+.item {
+    border-radius: 2px;
+    background-color: white; 
+    margin: 0 auto;
+    width: 90%;
+    padding: 20px;
+    box-shadow: 4px 4px 8px black;
+    color: black;
+    align-items: center;
+    justify-self: center; 
+    text-shadow: 2px 2px white;
+}
+
+.down-arrow {
+    border: solid white;
+    border-width: 0 10px 10px 0;
+    display: inline-block;
+    padding: 20px;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    filter: drop-shadow(4px 4px 2px black)
+
+}
+
+.center-obj {
+    transform: translateY(200%);
+    margin: auto;
+    width: 5%;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    animation: bounce 4s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+    
+    
+}
+
+@keyframes bounce {
+    from { transform: translate3d(0, 0, 0);}
+    to { transform: translate3d(0, 100px, 0);}
+}
+
+.clear {
+    text-shadow: 0px 0px black;
+    
+}
+
+
+.clear > mark {
+    text-shadow: 0px 0px black;
+    background-color: LightGray;
+    
+}
+
+.no-drop {
+    position: relative;
+}
+
+.no-drop:after {
+    text-shadow: 0px 0px black;
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Place the pseudo element right under the content */
+    top: 0;
+    left: 0;
+    background: linear-gradient(to top, LightGray 100%, transparent 100%);
+    animation-name: highlight;
+    animation-duration: 3s;
+}
+
+@keyframes highlight {
+    0% {
+        width: 0%; 
+        opacity: 0; 
+    }
+    50% {
+        width: 100%;
+        opacity: 1;
+        
+    }
+}
+
+.reveal {
+    position: relative;
+    transform: translateY(150px);
+    opacity: 0;
+    transition: 1s all ease;
+}
+  
+.reveal.active {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.colored {
+    color: black;
+    text-decoration: underline;
+    font-weight: 550;
+}
+
+
+.skill {
+    font-size: 8;
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+} 
+
+.skill:hover {
+    opacity: 70%;
+}
+
+.skill > p {
+    padding: 5px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 2px black;
+    text-shadow: 0px 0px none;
+
+
+
+}
+
+img {
+    height: 500px;
+    width: 100%;
+}
+
+.meet-element {
+    text-align: left; 
+    margin-left: 50px;
+    margin: 40px;
+}
+
+.form {
+    width: 100%;
+}
+
+.triangle-down {
+	width: 0;
+	height: 0;
+	border-left: 25px solid transparent;
+	border-right: 25px solid transparent;
+	border-top: 50px solid white;
+    transform: translateX(-50%);
+    position: absolute;
+    left: 50%;
+}
+
+#meet {
+    box-shadow: 2px 2px 1px black;
+}
+
+.about {
+    color: white; text-align: left; margin: 40px; margin-bottom: 0px; font-weight: bold;
+}
+
+#about_me {
+    padding: 50px;
+}
+
+#resume {
+    padding: 50px;
+}
+
+#projects {
+    padding: 50px;
+
+}
+
+.p-rack {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    width: 87%;
+    height: 10%;
+    margin: auto;
+
+}
+
+.p-card {
+    height: 725px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    background-color: grey;
+    align-items: center;
+    justify-self: center; 
+    border-radius: 5px
+}
+
+.p-card > img {
+    border-radius: 5px 5px 0 0;  
+
+}
+
+.p-card:hover {
+    box-shadow: 0 8px 32px 0 black;
+}
+
+.card-content {
+    padding: 2px 16px;
+}
+
+.about {
+    height: 100vh;
+}
