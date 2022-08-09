@@ -28,6 +28,7 @@
         <p>
             <span class="clear"><mark>Currently, I am working as an Undergraduate Research Assistant for the Efficient Computing Lab @ Yale and as a General Developer for the Yale Computer Society.</mark></span> However, these aren't my only CS endeavors, as I am constantly working on my own side projects. The ones that I thought were the coolest are under the project tab. 
             <br>
+            <br>
             Also, please do not hesistate to reach out to me using the Contact form if you have any questions about me or my work!
         </p>
 
@@ -78,63 +79,68 @@
 {% endblock %}
 
 {% block project1 %}
-<div class='p-card reveal'>
-        <img src="/static/images/forwarder.png" alt="project-image">    
-        <div class="card-content">
-        <br>
-        <h4><b>Research Applications</b></h2>
-        <h5><em>Summer 2022 - Present</em></h5>
-        <div class="skill-rack">
-            <div class='skill'>
-                <p style="background-color: rgb(203,96,21)">Rust</p>
+<a href="https://github.com/emath12/Theseus/tree/packet_forwarder/packet_forwarder">
+    <div class='p-card reveal noSelect'>
+            <img src="/static/images/forwarder.png" alt="project-image" >    
+            <div class="card-content">
+            <br>
+            <h4><b>Research Applications</b></h2>
+            <h5><em>Summer 2022 - Present</em></h5>
+            <div class="skill-rack">
+                <div class='skill'>
+                    <p style="background-color: rgb(203,96,21)">Rust</p>
+                </div>
+                <div class='skill'>
+                    <p style="background-color: rgb(87, 87, 87)">Computer Networking</p>
+                </div>
+                <div class='skill'>
+                    <p style="background-color: rgb(87, 87, 87)">Research</p>
+                </div>
             </div>
-            <div class='skill'>
-                <p style="background-color: rgb(87, 87, 87)">Computer Networking</p>
-            </div>
-            <div class='skill'>
-                <p style="background-color: rgb(87, 87, 87)">Research</p>
-            </div>
+            <p>
+                I designed a packet forwardering application to test the throughput of a 10 GbE ixgbe driver. I help to iterate on
+                the driver's design to hopefully acheive a line rate of network throughput. 
+            </p>
         </div>
-        <p>
-            I designed a packet forwardering application to test the throughput of a 10 GbE ixgbe driver. I help to iterate on
-            the driver's design to hopefully acheive a line rate of network throughput. 
-        </p>
-    </div>
 
-</div>
+    </div>
+</a>
 {% endblock %}
 
 {% block project2 %}
-<div class='p-card reveal'>
-        <img src="/static/images/portfolio.png" alt="project-image">    
-        <div class="card-content">
-        <br>
-        <h4><b>Personal Portfoilo</b></h2>
-        <h5><em>July 2022</em></h5>
-        <div class="skill-rack">
-            <div class='skill'>
-                <p style="background-color: red">HTML5</p>
-            </div>
-            <div class='skill'>
-                <p style="background-color: blue">CSS3</p>
-            </div>
-            <div class='skill'>
-                <p style="background-color: green">Python</p>
-            </div>
-            <div class='skill'>
-                <p style="background-color: rgba(206, 198, 34, 0.953)">Flask</p>
-            </div>
-            <div class='skill'>
-                <p style="background-color: rgb(87, 87, 87)">Web Development</p>
+<a href='https://github.com/emath12/personal_portfolio'>
+        <div class='p-card reveal'>
+                <img src="/static/images/portfolio.png" alt="project-image">    
+        
+                <div class="card-content">
+                <br>
+                <h4 class="skill"><b>Personal Portfoilo</b></h2>
+                <h5><em>July 2022</em></h5>
+                <div class="skill-rack">
+                    <div class='skill'>
+                        <p style="background-color: red">HTML5</p>
+                    </div>
+                    <div class='skill'>
+                        <p style="background-color: blue">CSS3</p>
+                    </div>
+                    <div class='skill'>
+                        <p style="background-color: green">Python</p>
+                    </div>
+                    <div class='skill'>
+                        <p style="background-color: rgba(206, 198, 34, 0.953)">Flask</p>
+                    </div>
+                    <div class='skill'>
+                        <p style="background-color: rgb(87, 87, 87)">Web Development</p>
+                    </div>
+                </div>
+            
+                <p>
+                    What you currently are seeing, my personal portfolio! I designed this as a landing page for anyone
+                    interested in learning more about me or seeing the side projects I'm making. 
+                </p>
             </div>
         </div>
-        <p>
-            What you currently are seeing, my personal portfolio! I designed this as a landing page for anyone
-            interested in learning more about me or seeing the side projects I'm making. 
-        </p>
-    </div>
-
-</div>
+    </a>
 {% endblock %}
 
 
